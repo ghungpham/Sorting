@@ -16,9 +16,13 @@ def merge( arrA, arrB ):
 def merge_sort( arr ):
     # TO-DO
     if len(arr) > 1:
-        partition = len(arr)/2
-        arrA = left(hand) 
-        arrB = right()
+        arrA = arr[:(len(arr)/2)]
+        arrB = arr[(len(arr)/2):]
+        if len(arrA) > 1 or len(arrB) > 1:
+            merge_sort(arrA)
+            merge_sort(arrB)
+    else:
+        arr = merge(arrA, arrB)
 
 
     return arr
